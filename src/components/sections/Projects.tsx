@@ -41,14 +41,15 @@ const projects: ProjectData[] = [
     githubUrl: "https://github.com/Pranay-Siddhartha/Conversational-SIEM-Copilot",
   },
   {
-    featured: false,
-    title: "Caramel Bakery",
+    featured: true,
+    title: "SendGuard AI",
     description:
-      "Premium bakery website with a custom TasteFinder chatbot that recommends products based on flavor preferences.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://caramel-web-app.netlify.app/",
-    githubUrl: "https://github.com/Pranay-Siddhartha/Caramel-Web-App-Project",
+      "AI-powered email + whatsapp security solution that detects and prevents phishing attempts and malicious attachments.",
+    tags: ["Next.js", "FastAPI", "Groq LLM"],
+    liveUrl: "https://ai-send-guard-indol.vercel.app/",
+    githubUrl: "https://github.com/Pranay-Siddhartha/AI-SendGuard",
   },
+  
 ];
 
 const sectionVariants = {
