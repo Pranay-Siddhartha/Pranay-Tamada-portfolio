@@ -11,7 +11,12 @@ import {
 } from "react-icons/si";
 import { FaJava, FaDatabase } from "react-icons/fa";
 
-const techConfig: Record<string, { icon: React.ElementType, colorClass: string }> = {
+type TechConfigEntry = {
+  icon: React.ComponentType<{ className?: string }>;
+  colorClass: string;
+};
+
+const techConfig: Record<string, TechConfigEntry> = {
   "React": { icon: SiReact, colorClass: "group-hover:text-[#61DAFB]" },
   "Next.js": { icon: SiNextdotjs, colorClass: "group-hover:text-white" },
   "Tailwind CSS": { icon: SiTailwindcss, colorClass: "group-hover:text-[#38B2AC]" },
