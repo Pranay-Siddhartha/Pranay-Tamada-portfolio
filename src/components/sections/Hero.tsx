@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
+import CardSwap, { Card } from '@/components/ui/CardSwap';
+import { SiReact, SiPython, SiNodedotjs, SiMongodb } from 'react-icons/si';
 
 export { Hero };
 
@@ -227,9 +229,71 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── Right Side – Code Editor ── */}
-          <div className="hidden lg:flex flex-[0_0_40%] items-center justify-center">
-            <CodeEditorMockup />
+          {/* ── Right Side – Card Swap ── */}
+          <div className="hidden lg:flex flex-[0_0_40%] items-center justify-center relative min-h-[500px]">
+            <div className="absolute inset-0 bg-accent/15 rounded-full blur-[120px] pointer-events-none" />
+            <CardSwap
+              width={360}
+              height={250}
+              cardDistance={62}
+              verticalDistance={40}
+              delay={4000}
+              pauseOnHover={true}
+              skewAmount={4}
+              easing="elastic"
+            >
+              <Card className="!bg-gradient-to-br !from-[#0d1117] !to-[#161b22] !border-[#61DAFB]/30 p-8 flex flex-col justify-between shadow-[0_0_40px_rgba(97,218,251,0.15)]">
+                <SiReact className="w-10 h-10 text-[#61DAFB]" />
+                <div className="mt-4">
+                  <h4 className="text-white font-bold text-lg">React & Next.js</h4>
+                  <p className="text-gray-400 text-sm mt-1">Building modern, performant UIs</p>
+                </div>
+                <div className="flex gap-2 mt-4">
+                  <span className="text-[10px] font-mono bg-[#61DAFB]/10 text-[#61DAFB] px-2 py-1 rounded-md">React</span>
+                  <span className="text-[10px] font-mono bg-[#61DAFB]/10 text-[#61DAFB] px-2 py-1 rounded-md">Next.js</span>
+                  <span className="text-[10px] font-mono bg-[#61DAFB]/10 text-[#61DAFB] px-2 py-1 rounded-md">TypeScript</span>
+                </div>
+              </Card>
+
+              <Card className="!bg-gradient-to-br !from-[#0d1117] !to-[#161b22] !border-[#3776AB]/30 p-8 flex flex-col justify-between shadow-[0_0_40px_rgba(55,118,171,0.15)]">
+                <SiPython className="w-10 h-10 text-[#3776AB]" />
+                <div className="mt-4">
+                  <h4 className="text-white font-bold text-lg">Python & AI Integration</h4>
+                  <p className="text-gray-400 text-sm mt-1">AI‑powered apps & automation</p>
+                </div>
+                <div className="flex gap-2 mt-4">
+                  <span className="text-[10px] font-mono bg-[#3776AB]/10 text-[#3776AB] px-2 py-1 rounded-md">Python</span>
+                  <span className="text-[10px] font-mono bg-[#3776AB]/10 text-[#3776AB] px-2 py-1 rounded-md">FastAPI</span>
+                  <span className="text-[10px] font-mono bg-[#3776AB]/10 text-[#3776AB] px-2 py-1 rounded-md">Django</span>
+                </div>
+              </Card>
+
+              <Card className="!bg-gradient-to-br !from-[#0d1117] !to-[#161b22] !border-[#339933]/30 p-8 flex flex-col justify-between shadow-[0_0_40px_rgba(51,153,51,0.15)]">
+                <SiNodedotjs className="w-10 h-10 text-[#339933]" />
+                <div className="mt-4">
+                  <h4 className="text-white font-bold text-lg">Node.js & Express</h4>
+                  <p className="text-gray-400 text-sm mt-1">Scalable backend services</p>
+                </div>
+                <div className="flex gap-2 mt-4">
+                  <span className="text-[10px] font-mono bg-[#339933]/10 text-[#339933] px-2 py-1 rounded-md">Node.js</span>
+                  <span className="text-[10px] font-mono bg-[#339933]/10 text-[#339933] px-2 py-1 rounded-md">Express</span>
+                  <span className="text-[10px] font-mono bg-[#339933]/10 text-[#339933] px-2 py-1 rounded-md">REST API</span>
+                </div>
+              </Card>
+
+              <Card className="!bg-gradient-to-br !from-[#0d1117] !to-[#161b22] !border-[#47A248]/30 p-8 flex flex-col justify-between shadow-[0_0_40px_rgba(71,162,72,0.15)]">
+                <SiMongodb className="w-10 h-10 text-[#47A248]" />
+                <div className="mt-4">
+                  <h4 className="text-white font-bold text-lg">Database & DevOps</h4>
+                  <p className="text-gray-400 text-sm mt-1">Data modeling & deployment</p>
+                </div>
+                <div className="flex gap-2 mt-4">
+                  <span className="text-[10px] font-mono bg-[#47A248]/10 text-[#47A248] px-2 py-1 rounded-md">MongoDB</span>
+                  <span className="text-[10px] font-mono bg-[#47A248]/10 text-[#47A248] px-2 py-1 rounded-md">Docker</span>
+                  <span className="text-[10px] font-mono bg-[#47A248]/10 text-[#47A248] px-2 py-1 rounded-md">SQL</span>
+                </div>
+              </Card>
+            </CardSwap>
           </div>
         </div>
       </div>

@@ -30,7 +30,29 @@ interface ProjectData {
   githubUrl: string;
 }
 
-const projects: ProjectData[] = [
+const mernProjects: ProjectData[] = [
+  {
+    featured: false,
+    title: "Restaurant Reservation System",
+    description:
+      "A web application that allows users to make reservations at restaurants, view available time slots, and manage their bookings. It also provides restaurant owners with a dashboard to manage reservations and customer data.",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    liveUrl: "https://restaurant-reservation-system-red-seven.vercel.app/",
+    githubUrl: "https://github.com/Pranay-Siddhartha/Restaurant-Reservation-System",
+  },
+
+  {
+    featured: false,
+    title: "Smart Parking System",
+    description:
+      "A web application that allows users to find available parking spots in real-time, reserve a spot, and make payments. It also provides parking lot owners with a dashboard to manage parking spaces and monitor occupancy.",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    liveUrl: "https://smart-parking-system-red-seven.vercel.app/",
+    githubUrl: "https://github.com/Pranay-Siddhartha/Smart-Parking-System",
+  },
+];
+
+const pythonProjects: ProjectData[] = [
   {
     featured: true,
     title: "Conversational SIEM Copilot",
@@ -41,14 +63,14 @@ const projects: ProjectData[] = [
     githubUrl: "https://github.com/Pranay-Siddhartha/Conversational-SIEM-Copilot",
   },
   {
-    featured: false,
-    title: "Caramel Bakery",
+    featured: true,
+    title: "AI SendGuard",
     description:
-      "Premium bakery website with a custom TasteFinder chatbot that recommends products based on flavor preferences.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://caramel-web-app.netlify.app/",
-    githubUrl: "https://github.com/Pranay-Siddhartha/Caramel-Web-App-Project",
-  },
+      "AI-powered recipient security tool that detects and prevents sensitive data leaks in outgoing emails, providing real-time alerts and suggestions for secure communication.",
+    tags: ["Next.js", "FastAPI", "SQLite"],
+    liveUrl: "https://ai-send-guard-indol.vercel.app/",
+    githubUrl: "https://github.com/Pranay-Siddhartha/AI-SendGuard",
+  }
 ];
 
 const sectionVariants = {
@@ -179,25 +201,62 @@ export default function Projects() {
         >
           <p className="text-xs uppercase tracking-widest text-text-tertiary flex items-center gap-2 mb-4">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent" />
-            Featured Projects
+            Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gradient">
             Selected work
           </h2>
         </motion.div>
 
-        {/* Project cards */}
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="space-y-20"
-        >
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
-          ))}
-        </motion.div>
+        {/* MERN Stack Section */}
+        <div className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-4 mb-10"
+          >
+            <h3 className="text-2xl font-bold text-text-primary">MERN Stack Projects</h3>
+            <div className="h-[1px] flex-grow bg-border" />
+          </motion.div>
+
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="space-y-20"
+          >
+            {mernProjects.map((project, index) => (
+              <ProjectCard key={project.title} project={project} index={index} />
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Python Stack Section */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-4 mb-10"
+          >
+            <h3 className="text-2xl font-bold text-text-primary">Python Stack Projects</h3>
+            <div className="h-[1px] flex-grow bg-border" />
+          </motion.div>
+
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="space-y-20"
+          >
+            {pythonProjects.map((project, index) => (
+              <ProjectCard key={project.title} project={project} index={index} />
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

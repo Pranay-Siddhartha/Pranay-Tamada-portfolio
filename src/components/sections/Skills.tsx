@@ -2,17 +2,38 @@
 
 import { motion } from 'framer-motion'
 
+import { 
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiFastapi,
+  SiSqlite,
+  SiHtml5,
+  SiCss,
+  SiTailwindcss,
+  SiGit 
+} from 'react-icons/si'
+
 const skills = [
-  'Frontend Development',
-  'Backend Architecture',
-  'AI & Machine Learning',
-  'Cloud Infrastructure',
-  'DevOps & CI/CD',
-  'Database Design',
-  'API Development',
-  'UI/UX Design',
-  'System Design',
-  'Problem Solving',
+  { name: 'JavaScript', icon: SiJavascript },
+  { name: 'TypeScript', icon: SiTypescript },
+  { name: 'Python', icon: SiPython },
+  { name: 'React', icon: SiReact },
+  { name: 'Next.js', icon: SiNextdotjs },
+  { name: 'Node.js', icon: SiNodedotjs },
+  { name: 'Express', icon: SiExpress },
+  { name: 'MongoDB', icon: SiMongodb },
+  { name: 'FastAPI', icon: SiFastapi },
+  { name: 'SQLite', icon: SiSqlite },
+  { name: 'HTML5', icon: SiHtml5 },
+  { name: 'CSS3', icon: SiCss },
+  { name: 'Tailwind CSS', icon: SiTailwindcss },
+  { name: 'Git', icon: SiGit },
 ] as const
 
 const containerVariants = {
@@ -81,18 +102,19 @@ export default function Skills() {
         >
           {skills.map((skill) => (
             <motion.span
-              key={skill}
+              key={skill.name}
               variants={pillVariants}
               whileHover={{
                 scale: 1.05,
                 transition: { type: 'spring', stiffness: 400, damping: 15 },
               }}
-              className="glass rounded-full px-6 py-3 text-sm font-medium text-text-secondary
+              className="glass flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-text-secondary
                 cursor-default select-none
                 hover:border-accent/30 hover:text-accent hover:glow-accent
                 transition-premium"
             >
-              {skill}
+              <skill.icon className="w-4 h-4" />
+              {skill.name}
             </motion.span>
           ))}
         </motion.div>

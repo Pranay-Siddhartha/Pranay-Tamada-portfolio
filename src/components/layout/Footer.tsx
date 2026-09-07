@@ -52,7 +52,7 @@ const socialLinks = [
   },
   {
     icon: Mail,
-    href: "mailto:hello@example.com",
+    href: "mailto:pranay.tamada@gmail.com",
     label: "Email",
   },
 ] as const;

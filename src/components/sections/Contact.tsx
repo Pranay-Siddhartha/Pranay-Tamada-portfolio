@@ -90,7 +90,7 @@ const contactLinks: ContactLink[] = [
     variant: "glass",
   },
   {
-    href: "/resume.pdf",
+    href: "\Resume - Pranay Siddhartha Tamada.pdf",
     icon: FileText,
     label: "Resume",
     variant: "accent",
@@ -148,7 +148,7 @@ export default function Contact() {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                download={link.label === "Resume" ? "Pranay_Siddhartha_Resume.pdf" : undefined}
+                download={link.label === "Resume" ? "Resume - Pranay Siddhartha Tamada.pdf" : undefined}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className={
