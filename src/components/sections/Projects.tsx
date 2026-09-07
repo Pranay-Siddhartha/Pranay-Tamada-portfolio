@@ -64,6 +64,7 @@ const pythonProjects: ProjectData[] = [
   },
   {
     featured: true,
+<<<<<<< HEAD
     title: "AI SendGuard",
     description:
       "AI-powered recipient security tool that detects and prevents sensitive data leaks in outgoing emails, providing real-time alerts and suggestions for secure communication.",
@@ -71,6 +72,16 @@ const pythonProjects: ProjectData[] = [
     liveUrl: "https://ai-send-guard-indol.vercel.app/",
     githubUrl: "https://github.com/Pranay-Siddhartha/AI-SendGuard",
   }
+=======
+    title: "SendGuard AI",
+    description:
+      "AI-powered email + whatsapp security solution that detects and prevents phishing attempts and malicious attachments.",
+    tags: ["Next.js", "FastAPI", "Groq LLM"],
+    liveUrl: "https://ai-send-guard-indol.vercel.app/",
+    githubUrl: "https://github.com/Pranay-Siddhartha/AI-SendGuard",
+  },
+  
+>>>>>>> 266da337b7ecbdf12a4713eef025b7cd1882c826
 ];
 
 const sectionVariants = {
