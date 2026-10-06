@@ -218,7 +218,7 @@ export default function Hero() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Pranay_Siddhartha_Tamada_Resume.pdf"
+                download="Resume_Pranay_Siddhartha_Tamada.pdf"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center justify-center gap-2 border border-border text-text-secondary font-semibold px-7 py-3.5 rounded-xl hover:text-text-primary hover:border-border-hover transition-premium"
