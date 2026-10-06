@@ -215,7 +215,7 @@ export default function Hero() {
               </motion.a>
 
               <motion.a
-                href="/resume.pdf"
+                href="/Resume_Pranay_Siddhartha_Tamada.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Resume_Pranay_Siddhartha_Tamada.pdf"
